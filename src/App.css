@@ -1,38 +1,436 @@
-.App {
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+#top-bar {
+  max-width: 670px;
+  margin: 70px auto 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 3px #dadada;
+  padding: 10px 0px;
+  background: #fff;
+}
+
+#bottom-bar {
+  max-width: 670px;
+  margin: 30px auto 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 3px #dadada;
+  padding: 10px 0px;
+  background: #fff;
+}
+
+.makeStyles-paper-5 {
+  height: 500px;
+  background: #f3f3f3 !important;
+  margin: 16px;
+}
+
+.nav-bar {
+  display: flex;
+}
+
+.nav-bar button {
+  order: 2;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.app-select .MuiSelect-icon {
+  color: rgb(255 255 255 / 54%);
+}
+
+.app-select .MuiOutlinedInput-notchedOutline {
+  border-color: rgb(255 255 255 / 23%);
+}
+
+.app-select .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: rgb(255 255 255 / 87%);
+}
+
+.MuiListItem-root.Mui-selected,
+.MuiListItem-root.Mui-selected:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dadada;
+}
+
+.app-select .MuiSelect-selectMenu {
+  height: 20px;
+  padding: 10px;
+}
+
+#top-bar svg,
+#bottom-bar svg {
+  color: #5c677d;
+}
+
+.app-option svg {
+  margin-right: 10px;
+  color: #5c677d;
+}
+
+.text-white.MuiInputLabel-formControl {
+  top: -9px;
+}
+
+.text-white.MuiInputLabel-outlined.MuiInputLabel-shrink {
+  top: 0;
+}
+
+.color-accord {
+  width: 300px;
+  margin: 20px;
+}
+
+.color-accord h5 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #0466c8;
+}
+.color-accord h5 svg {
+  margin-right: 5px;
+}
+
+#popUp .MuiPopover-paper,
+#simple-popover3 .MuiPopover-paper,
+#simple-popover4 .MuiPopover-paper {
+  left: 30px !important;
+}
+
+#simple-popover2 .MuiPopover-paper,
+#simple-popover5 .MuiPopover-paper,
+#simple-popover6 .MuiPopover-paper,
+#simple-popover7 .MuiPopover-paper {
+  right: 30px !important;
+  left: auto !important;
+  top: 200px !important;
+}
+
+.create-pro .MuiFormControl-root {
+  min-width: 50%;
+}
+
+.create-pro {
+  margin-top: 20px;
+}
+.create-pro h4 {
+  color: #5c677d;
+}
+
+.create-pro h6 {
+  margin-bottom: 50px;
+  color: #5c677d;
+}
+
+.pro-type h6 {
+  margin-bottom: 10px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  margin-top: 50px;
+  font-size: 17px;
+}
+
+.pro-type input[value="a"] + .PrivateRadioButtonIcon-root-16 {
+  background-image: url(img/smartphone.svg);
+  width: 150px;
+  height: 150px;
+  background-size: 150px;
+}
+
+.pro-type input[value="a"] + .PrivateRadioButtonIcon-checked-18 {
+  background-image: url(img/smartphone-cheked.svg);
+  width: 150px;
+  height: 150px;
+  background-size: 150px;
+}
+
+.pro-type input[value="b"] + .PrivateRadioButtonIcon-root-16 {
+  background-image: url(img/computer.svg);
+  width: 150px;
+  height: 150px;
+  background-size: 150px;
+}
+
+.pro-type input[value="b"] + .PrivateRadioButtonIcon-checked-18 {
+  background-image: url(img/computer-checked.svg);
+  width: 150px;
+  height: 150px;
+  background-size: 150px;
+}
+
+.pro-type .MuiSvgIcon-root {
+  display: none;
+}
+
+.pro-skin {
+  margin-top: 50px;
+}
+
+.pro-skin .MuiInputBase-root {
+  margin-top: 10px;
+  width: 50%;
+}
+
+.pro-btn {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 40px;
+}
+
+.pro-cre {
+  background-color: #0466c8 !important;
+  padding: 10px 40px !important;
+}
+
+.pro-can {
+  margin-right: 70px;
+}
+
+.img-section {
+  padding-right: 20px;
+}
+
+.img-section img {
+  background: #eee;
+  max-width: 100%;
+  height: auto;
+}
+
+.sections {
+  margin-top: 8%;
+  flex-grow: 1;
+}
+
+.login-form {
+  margin-top: 50px;
+}
+
+.login-form .MuiInputBase-root {
+  margin-bottom: 20px;
+}
+
+.login-form .MuiFormControl-root {
+  width: 100%;
+}
+
+.for-got {
+  display: block;
+  font-weight: 500 !important;
+  color: #b1b1b1 !important;
+  width: 100%;
+  text-align: right;
+  text-decoration: none !important;
+}
+
+.login-btn {
+  width: 150px;
+  padding: 10px 20px !important;
+  background-color: #0466c8 !important;
+  margin-top: 20px !important;
+  margin-right: 10px !important;
+}
+
+.sign-btn {
+  padding: 10px 20px !important;
+  margin-top: 20px !important;
+}
+
+.soci-text {
+  margin-top: 30px !important;
+}
+
+.social-icon .fb-btn svg {
+  color: #4267b2;
+  font-size: 40px;
+}
+
+.social-icon .g-btn {
+  margin-right: 5px;
+}
+
+.social-icon .g-btn img {
+  width: 28px;
+}
+
+/* slick */
+
+/* .slider {
+  width: 50%;
+  margin: 100px auto;
+}
+
+.slick-slide {
+  margin: 0px 20px;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+
+
+.slick-slide {
+  transition: all ease-in-out 0.3s;
+  opacity: 0.2;
+}
+
+.slick-active {
+  opacity: 0.5;
+}
+
+.slick-current {
+  opacity: 1;
+} */
+
+/* slick */
+
+.slick-prev:before,
+.slick-next:before {
+  color: #5c677d;
+  font-size: 40px;
+}
+
+.slick-prev {
+  left: -45px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 40px;
+  width: 80%;
+  color: #333;
+  background: #419be0;
+}
+
+.container2 {
+  width: 100%;
+  display: block;
+}
+
+.pro-type {
+  width: 100%;
+  float: left;
+}
+
+/* The container */
+.radi {
+  width: 150px;
+  height: 200px;
+  float: left;
+  display: block;
+  position: relative;
+  /* padding-left: 35px; */
+  margin-right: 40px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radi input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  left: 0;
+  z-index: 99;
+  margin: 0;
+  width: 150px;
+  height: 180px;
+}
+
+.mob-lab,
+.web-lab {
+  display: block;
+  margin-top: 150px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Create a custom radio button */
+/* .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+} */
+
+.mobile .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(img/smartphone.svg);
+  width: 150px;
+  height: 150px;
+  background-size: 150px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.web .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(img/computer.svg);
+  width: 150px;
+  height: 150px;
+  background-size: 150px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* .mobile .input:checked + .checkmark {
+  background-image: url(img/smartphone-cheked.svg);
 }
 
-.App-link {
-  color: #61dafb;
+.web .input:checked + .checkmark {
+  background-image: url(img/computer-checked.svg);
+} */
+
+/* On mouse-over, add a grey background color */
+/* .radi:hover input ~ .checkmark {
+  background-color: #ccc;
+} */
+
+/* When the radio button is checked, add a blue background */
+.mobile input:checked ~ .checkmark {
+  background-image: url(img/smartphone-cheked.svg);
+  /* background-color: #2196f3; */
+}
+.web input:checked ~ .checkmark {
+  background-image: url(img/computer-checked.svg);
+  /* background-color: #2196f3; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
 }
+
+/* Show the indicator (dot/circle) when checked */
+.radi input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+/* .radi .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+} */
